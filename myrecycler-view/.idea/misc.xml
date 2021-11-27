@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/ITARSI-Codebase/myrecycler-view/app/src/main/res/layout/activity_contoh.xml" value="0.33" />
+        <entry key="..\:/Project/ITARSI-Codebase/myrecycler-view/app/src/main/res/layout/activity_detail.xml" value="0.75" />
         <entry key="..\:/Project/ITARSI-Codebase/myrecycler-view/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Project/ITARSI-Codebase/myrecycler-view/app/src/main/res/layout/item_pengguna.xml" value="0.5" />
+        <entry key="..\:/Project/ITARSI-Codebase/myrecycler-view/app/src/main/res/menu/detail_menu.xml" value="0.33" />
       </map>
     </option>
   </component>

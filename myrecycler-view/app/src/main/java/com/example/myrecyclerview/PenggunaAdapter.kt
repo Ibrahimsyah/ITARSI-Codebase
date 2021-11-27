@@ -5,11 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.CircleCropTransformation
 
-class PenggunaAdapter(val listPengguna: List<Pengguna>) :
+class PenggunaAdapter(
+    val listPengguna: List<Pengguna>,
+    val onClickListener: (Pengguna) -> Unit
+) :
     RecyclerView.Adapter<PenggunaAdapter.PenggunaViewHolder>() {
 
     inner class PenggunaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -20,9 +24,11 @@ class PenggunaAdapter(val listPengguna: List<Pengguna>) :
         fun bind(pengguna: Pengguna) {
             tvNama.text = pengguna.nama
             tvAlamat.text = pengguna.alamat
-            ivFoto.load(pengguna.foto){
+            ivFoto.load(pengguna.foto) {
                 transformations(CircleCropTransformation())
             }
+
+            itemView.setOnClickListener { onClickListener(pengguna) }
         }
     }
 
