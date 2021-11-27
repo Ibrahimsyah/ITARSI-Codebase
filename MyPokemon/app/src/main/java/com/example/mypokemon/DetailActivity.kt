@@ -1,7 +1,10 @@
 package com.example.mypokemon
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import coil.load
@@ -17,18 +20,24 @@ class DetailActivity : AppCompatActivity() {
         val ivDetailImage = findViewById<ImageView>(R.id.iv_detail_image)
         val ivDetailSpecies = findViewById<TextView>(R.id.tv_detail_species)
         val ivDetailDescription = findViewById<TextView>(R.id.tv_detail_description)
+        val btnWiki = findViewById<Button>(R.id.btn_link)
 
         val pokemon = intent.getParcelableExtra<Pokemon>(EXTRA_POKEMON)
 
-        pokemon?.let {
-            ivDetailImage.load(it.image){
+        pokemon?.let { pokemon ->
+            ivDetailImage.load(pokemon.image){
                 crossfade(1000)
                 crossfade(true)
             }
-            ivDetailSpecies.text = it.species
-            ivDetailDescription.text = it.description
+            ivDetailSpecies.text = pokemon.species
+            ivDetailDescription.text = pokemon.description
 
-            supportActionBar?.title = it.name
+            btnWiki.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.setData(Uri.parse(pokemon.link))
+                startActivity(intent)
+            }
+            supportActionBar?.title = pokemon.name
         }
     }
 }

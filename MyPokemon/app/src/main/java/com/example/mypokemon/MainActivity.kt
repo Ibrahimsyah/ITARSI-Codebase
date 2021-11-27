@@ -18,19 +18,22 @@ class MainActivity : AppCompatActivity() {
                 "Bulbasaur",
                 "Seed",
                 "https://cdn.traction.one/pokedex/pokemon/1.png",
-                "While it is young, it uses the nutrients that are stored in the seeds on its back in order to grow."
+                "While it is young, it uses the nutrients that are stored in the seeds on its back in order to grow.",
+                "https://pokemon.fandom.com/wiki/Bulbasaur"
             ),
             Pokemon(
                 "Ivysaur",
                 "Seed",
                 "https://cdn.traction.one/pokedex/pokemon/2.png",
-                "The bulb on its back grows as it absorbs nutrients. The bulb gives off a pleasant aroma when it blooms."
+                "The bulb on its back grows as it absorbs nutrients. The bulb gives off a pleasant aroma when it blooms.",
+                "https://pokemon.fandom.com/wiki/Ivysaur"
             ),
             Pokemon(
                 "Venusaur",
                 "Seed",
                 "https://cdn.traction.one/pokedex/pokemon/3.png",
-                "As it warms itself and absorbs the sunlight, its flower petals release a pleasant fragrance."
+                "As it warms itself and absorbs the sunlight, its flower petals release a pleasant fragrance.",
+                "https://pokemon.fandom.com/wiki/Venusaur"
             ),
         )
 

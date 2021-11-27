@@ -8,5 +8,6 @@ data class Pokemon(
     val name: String,
     val species: String,
     val image: String,
-    val description: String
+    val description: String,
+    val link: String
 ) : Parcelable
